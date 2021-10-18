@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1633363317 source:/home/bruno/AprendiendoC/Bruno/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"varios.h"
+
+1632506289 /home/bruno/AprendiendoC/Bruno/varios.c
+
+1633354226 source:/home/bruno/AprendiendoC/Bruno/varios.c
+	<time.h>
+	"varios.h"
+
+1633353038 /home/bruno/AprendiendoC/Bruno/varios.h
+
+1633346225 source:/home/bruno/AprendiendoC/Bruno/temp.c
+
+1634305358 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\main.c
+	<stdio.h>
+	"consola.h"
+	"shapes.h"
+
+1633973406 c:\users\bruno\aprendiendoc\aprendiendoc\bruno\varios.h
+
+1634049115 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\varios.c
+	<time.h>
+	"varios.h"
+
+1633610013 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\equipos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"varios.h"
+	<conio.h>
+
+1633981207 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\juegos.c
+	"varios.h"
+
+1633981178 c:\users\bruno\aprendiendoc\aprendiendoc\bruno\juegos.h
+
+1634213944 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\consola.c
+	<windows.h>
+
+1634213970 c:\users\bruno\aprendiendoc\aprendiendoc\bruno\consola.h
+
+1634210642 c:\users\bruno\aprendiendoc\aprendiendoc\bruno\shapes.h
+
+1634210621 source:c:\users\bruno\aprendiendoc\aprendiendoc\bruno\shapes.c
+	<stdio.h>
+	"consola.h"
+	"shapes.h"
+

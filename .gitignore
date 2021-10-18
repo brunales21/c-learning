@@ -1,4 +1,6 @@
-# Prerequisites
+/bin
+
+#Prerequisites
 *.d
 
 # Object files
