@@ -24,8 +24,7 @@ int main() {
 
     }
 
-
-//mostrar animación
+//mostrar animaciÃ³n
     int flag;
 
     do {
@@ -43,74 +42,6 @@ int main() {
          usleep(1000);
     } while(!kbhit() && flag);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*int main() {
 
@@ -232,9 +163,6 @@ int main() {
 	return 0;
 }
 */
-
-
-
 
 
 //Primer prototipo: Personaje (caracter) se mueve por la pantalla por cada vez que se toca una flecha
