@@ -1,4 +1,9 @@
-#include<windows.h>
+#include <windows.h>
+#include "consola.h"
+
+int isNotKeyboardTouched() {
+    return !kbhit();
+}
 
 void hideCursor() {
    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -39,5 +44,17 @@ void gotoxyChar(int x, int y, char c) {
 void gotoxyText(int x, int y, char * text) {
     gotoxy(x, y);
     printf("%s", text);
+}
+
+void setPause(int pause) {
+    _pause = pause;
+}
+
+int getPause() {
+    return _pause;
+}
+
+void pause() {
+    usleep(_pause);
 }
 
