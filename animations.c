@@ -301,6 +301,29 @@ void bounce() {
 
         moveToPosition(x3, y3);
 
+        //Chequea y controla cambio de tamanho de la pantalla
+        int width2 = getScreenWidth()-1;
+        int height2 = getScreenHeight()-1;
+        if (width2 != width) {
+            if (x2 == width) {
+                x2 = width2;
+            }
+            if (x3 == width) {
+                x3 = width2;
+            }
+            width = width2;
+        }
+        if (height2 != height) {
+            if (y2 == height) {
+                y2 = height2;
+            }
+            if (y3 == height) {
+                y3 = height2;
+            }
+            height = height2;
+        }
+
+        //Nuevos últimos puntos:
         x1 = x2;
         y1 = y2;
 
