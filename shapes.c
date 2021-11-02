@@ -58,11 +58,22 @@ int isTraceDisabled() {
 void moveToPosition(int x2, int y2) {
     static int x1 = 0;
     static int y1 = 0;
-    if (abs(x1-x2) >= abs(y1-y2)) {
-        moveToPositionByX(x1, y1, x2, y2);
-    } else {
-        moveToPositionByY(x1, y1, x2, y2);
+
+    // Esto lo puse porque si no estaba habilitado el trace, se dejaba sin borrar una posicion anterior...
+    if (isTraceDisabled()) {
+        clearSymbolXY(x1, y1);
     }
+
+    if (x1 != x2 || y1 != y2) { // Este "if" lo puse por un bug que ví....luego te lo cuento, Bruno...
+        if (abs(x1-x2) >= abs(y1-y2)) {
+            moveToPositionByX(x1, y1, x2, y2);
+        } else {
+            moveToPositionByY(x1, y1, x2, y2);
+        }
+    }
+
+    drawSymbolXY(x2, y2); // Esto lo puse porque si no estaba habilitado el trace, no mostraba nada...
+
     x1 = x2;
     y1 = y2;
 }
@@ -73,6 +84,7 @@ void moveToPositionByX(int x1, int y1, int x2, int y2) {
     for(int x = x1; x * sign <= x2 * sign; x+=sign) {
         int y = slope * (x - x1) + y1;
         drawSymbolXY(x, y);
+
         pause();
         if (isTraceDisabled()) {
             clearSymbolXY(x, y);

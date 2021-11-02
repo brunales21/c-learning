@@ -8,10 +8,10 @@
 
 static int _pause = 0;
 
-int isNotKeyboardTouched();
+int isKbUntouched();
 void hideCursor();
-int getWidth();
-int getHeight();
+int getScreenWidth();
+int getScreenHeight();
 void setColor(int color);
 void gotoxy(int x,int y);
 void gotoxyChar(int x, int y, char c);

@@ -1,7 +1,7 @@
 #include <windows.h>
 #include "consola.h"
 
-int isNotKeyboardTouched() {
+int isKbUntouched() {
     return !kbhit();
 }
 
@@ -13,13 +13,13 @@ void hideCursor() {
    SetConsoleCursorInfo(consoleHandle, &info);
 }
 
-int getWidth() {
+int getScreenWidth() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
     return csbi.srWindow.Right - csbi.srWindow.Left + 1;
 }
 
-int getHeight() {
+int getScreenHeight() {
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
     return csbi.srWindow.Bottom - csbi.srWindow.Top + 1;

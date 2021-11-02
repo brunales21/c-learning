@@ -52,38 +52,40 @@
 	"consola.h"
 	"shapes.h"
 
-1635421269 source:c:\users\bruno\workspace\c-learning\consola.c
+1635795943 source:c:\users\bruno\workspace\c-learning\consola.c
 	<windows.h>
 	"consola.h"
 
-1633981207 source:c:\users\bruno\workspace\c-learning\juegos.c
+1633977607 source:c:\users\bruno\workspace\c-learning\juegos.c
 	"varios.h"
 
-1633973406 c:\users\bruno\workspace\c-learning\varios.h
+1633969806 c:\users\bruno\workspace\c-learning\varios.h
 
-1635418231 source:c:\users\bruno\workspace\c-learning\shapes.c
+1635705249 source:c:\users\bruno\workspace\c-learning\shapes.c
 	<stdio.h>
 	"consola.h"
 	"shapes.h"
 
-1635421247 c:\users\bruno\workspace\c-learning\consola.h
+1635795943 c:\users\bruno\workspace\c-learning\consola.h
 
-1635416540 c:\users\bruno\workspace\c-learning\shapes.h
+1635412940 c:\users\bruno\workspace\c-learning\shapes.h
 
-1634049115 source:c:\users\bruno\workspace\c-learning\varios.c
+1634045515 source:c:\users\bruno\workspace\c-learning\varios.c
 	<time.h>
 	"varios.h"
 
-1635421983 source:c:\users\bruno\workspace\c-learning\animations.c
+1635864256 source:c:\users\bruno\workspace\c-learning\animations.c
 	<stdio.h>
 	"consola.h"
 	"shapes.h"
 	"animations.h"
 
-1635421717 c:\users\bruno\workspace\c-learning\animations.h
+1635863330 c:\users\bruno\workspace\c-learning\animations.h
 
-1635421775 source:c:\users\bruno\workspace\c-learning\main.c
+1635864348 source:c:\users\bruno\workspace\c-learning\main.c
 	<stdio.h>
+	<windows.h>
 	"consola.h"
 	"shapes.h"
+	"animations.h"
 
