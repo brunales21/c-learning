@@ -5,7 +5,7 @@ static void _showNumber(int number, int base) {
         _showNumber(number/base, base);
         number = number%base;
     }
-    printf("%c", number < 10 ? 48 + number : 55 + number);
+    printf("%c", (number < 10 ? 48 : 55) + number);
 }
 
 void showNumber(int number, int base) {
