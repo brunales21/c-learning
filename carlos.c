@@ -2,8 +2,8 @@
 
 static void _showNumber(int number, int base) {
     if (number >= base) {
-        _showNumber(number/base, base);
-        number = number%base;
+        _showNumber(number / base, base);
+        number = number % base;
     }
     printf("%c", (number < 10 ? 48 : 55) + number);
 }
