@@ -39,4 +39,5 @@ void moveToPositionByY(int x1, int y1, int x2, int y2);
 void showDots(Position *source, Position *target, int speed);
 
 
+
 #endif // SHAPES_H_INCLUDED

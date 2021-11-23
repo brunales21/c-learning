@@ -78,7 +78,7 @@ int length(char texto[]) {
 
 void reverse(char texto[]) {
     for (int i = length(texto) - 1; i >= 0; i--) {
-        printf("%c\n", texto[i]);
+        printf("%c", texto[i]);
     }
     printf("\n");
 }
@@ -123,7 +123,7 @@ void subString(char texto[], int ini, int fin, char target[]) {
     int len = fin - ini;
     for(int i = ini; i < fin; i++) {
         //*(target + i-ini) = *(texto + i)
-        target[i-ini] = texto [i];
+        target[i-ini] = texto[i];
     }
      target[len] = 0;
 }
@@ -261,11 +261,10 @@ void ordenaLetrasDes(char texto[]) {
     } while (flag);
 }
 
-/*
+
 int mainPlayAhorcado() {
     srand(time(NULL));
     playAhorcado();
-    play();
     printf("%d", cuentaLetrasDistintas("1112333"));
     char palabra[50] = "onurb";
     ordenaLetras(palabra, 0);

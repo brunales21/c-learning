@@ -52,40 +52,78 @@
 	"consola.h"
 	"shapes.h"
 
-1635795943 source:c:\users\bruno\workspace\c-learning\consola.c
+1635870130 source:c:\users\bruno\workspace\c-learning\consola.c
 	<windows.h>
 	"consola.h"
 
-1633977607 source:c:\users\bruno\workspace\c-learning\juegos.c
+1637596846 source:c:\users\bruno\workspace\c-learning\juegos.c
 	"varios.h"
+	"consola.h"
+	"juegos.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
 
-1633969806 c:\users\bruno\workspace\c-learning\varios.h
+1636033705 c:\users\bruno\workspace\c-learning\varios.h
 
-1635705249 source:c:\users\bruno\workspace\c-learning\shapes.c
+1637596846 source:c:\users\bruno\workspace\c-learning\shapes.c
 	<stdio.h>
 	"consola.h"
 	"shapes.h"
+	"math.h"
 
 1635795943 c:\users\bruno\workspace\c-learning\consola.h
 
-1635412940 c:\users\bruno\workspace\c-learning\shapes.h
+1637596846 c:\users\bruno\workspace\c-learning\shapes.h
 
-1634045515 source:c:\users\bruno\workspace\c-learning\varios.c
+1636656482 source:c:\users\bruno\workspace\c-learning\varios.c
 	<time.h>
 	"varios.h"
 
-1635864564 source:c:\users\bruno\workspace\c-learning\animations.c
+1637596846 source:c:\users\bruno\workspace\c-learning\animations.c
 	<stdio.h>
 	"consola.h"
 	"shapes.h"
 	"animations.h"
 
-1635863330 c:\users\bruno\workspace\c-learning\animations.h
+1637596846 c:\users\bruno\workspace\c-learning\animations.h
 
-1635864348 source:c:\users\bruno\workspace\c-learning\main.c
+1637604307 source:c:\users\bruno\workspace\c-learning\main.c
 	<stdio.h>
+	<stdlib.h>
+	<conio.h>
 	<windows.h>
 	"consola.h"
 	"shapes.h"
 	"animations.h"
+	"math.h"
+	"varios.h"
+
+1636034079 c:\users\bruno\workspace\c-learning\math.h
+
+1636033202 source:c:\users\bruno\workspace\c-learning\math.c
+	"math.h"
+
+1636032591 c:\users\bruno\workspace\c-learning\math.c
+	"math.h"
+
+1636716799 source:c:\users\bruno\workspace\c-learning\putamadre.data.c
+
+1636719296 source:c:\users\bruno\workspace\c-learning\putamadre.c
+
+1636972509 source:c:\users\bruno\workspace\c-learning\temperaturas.c
+
+1637596846 c:\users\bruno\workspace\c-learning\juegos.h
+
+1637628237 source:c:\users\bruno\workspace\c-learning\busca_minas.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"consola.h"
+	"shapes.h"
+	"animations.h"
+	"math.h"
+	"varios.h"
 

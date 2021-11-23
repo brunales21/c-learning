@@ -1,4 +1,13 @@
 #include "varios.h"
+#include "consola.h"
+#include "juegos.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <windows.h>
+#define CLEANCONSOLE system("cls")
+
+
 
 void jugarPiedraPapelOTijera() {
 
@@ -48,4 +57,5 @@ void jugarPiedraPapelOTijera() {
     }
 
 }
+
 

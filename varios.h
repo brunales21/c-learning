@@ -1,4 +1,4 @@
-#define VARIOS_H_INCLUDED
+#ifndef VARIOS_H_INCLUDED
 #define VARIOS_H_INCLUDED
 
 int seguirJugando();
@@ -48,6 +48,7 @@ int ejWrite ();
 
 //void imprimir_datos(struct jugador *j);
 void imprimir_datos(Jugador *j);
+*/
 
 #endif // VARIOS_H_INCLUDED
-*/
+

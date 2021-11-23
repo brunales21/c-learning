@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "consola.h"
 #include "shapes.h"
+#include "math.h"
+
 
 void drawSymbolXY(int x, int y) {
     gotoxy(x, y);
@@ -104,6 +106,9 @@ void moveToPositionByY(int x1, int y1, int x2, int y2) {
         }
     }
 }
+
+
+
 
 
 

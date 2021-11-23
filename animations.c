@@ -29,15 +29,16 @@ int paint() {
     int minY = 0;
     int maxY = getScreenHeight() - 1; // Si height = 50, y va de 0 a 49, por lo que el máximo es 49.
 
-    int x = 0;
-    int y = 0;
+    int x = 20;
+    int y = 10;
+
 
     // Step nos permite cambiar la distancia de cada paso que se da.
     int stepX = 2;
     int stepY = 1;
 
     hideCursor();
-    enableTrace();
+    //enableTrace();
     setSymbol(0xDB);
 
     char key;
@@ -63,11 +64,15 @@ int paint() {
             case ARROW_RIGHT: x = x + stepX <= maxX ? x + stepX : x; break;
             case ARROW_DOWN: y = y + stepY <= maxY ? y + stepY : y; break;
             case ARROW_LEFT: x = x - stepX >= minX ? x - stepX : x; break;
+
+            }
+
         }
 
-    } while(key != 27);
+     while(key != 27);
 
 }
+
 
 
 int paintCarta() {
@@ -145,6 +150,12 @@ int showMatrixEffect(char * availableSymbols) {
         }
 
     } while(isKbUntouched());
+
+    char x = getch();
+    if (x == -32) {
+        getch();
+    }
+
 
 }
 
@@ -333,3 +344,6 @@ void bounce() {
         count++;
     } while(isKbUntouched());
 }
+
+
+
