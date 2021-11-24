@@ -1,5 +1,6 @@
 #include <time.h>
 #include "varios.h"
+#include <windows.h>
 #define FALSE 0
 #define TRUE 1
 #define MAX_AUX 257
@@ -333,41 +334,9 @@ int encuentraLetra(char texto[], char letras[]) {
     printf("\n");
     return contador;
 }
-/*
-int carlos () {
-   FILE * fp;
 
-   fp = fopen("c:\\temp\\equipos-ar.csv", "w+");
-
-    if (fp == NULL) {
-        printf("Error %d \n", errno);
-        return 1;
-    }
-
-   fprintf(fp, "%d,%s\n", 1, "Boca");
-   fprintf(fp, "%d,%s\n", 1, "River");
-
-   fclose(fp);
-
-   return(0);
+long getTimestamp() {
+    SYSTEMTIME time;
+    GetSystemTime(&time);
+    return time.wHour * 3600 + time.wMinute * 60 + time.wSecond;
 }
-
-int ejWrite () {
-   FILE * fp;
-
-   fp = fopen("c:\\temp\\equipos-ar.csv", "w+");
-
-    if (fp == NULL) {
-        printf("Error %d \n", errno);
-        return 1;
-    }
-
-   fprintf(fp, "%d,%s\n", 1, "Boca");
-   fprintf(fp, "%d,%s\n", 1, "River");
-
-   fclose(fp);
-
-   return(0);
-}
-*/
-

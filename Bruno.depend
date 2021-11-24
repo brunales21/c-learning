@@ -65,7 +65,7 @@
 	<conio.h>
 	<windows.h>
 
-1636033705 c:\users\bruno\workspace\c-learning\varios.h
+1637671977 c:\users\bruno\workspace\c-learning\varios.h
 
 1637596846 source:c:\users\bruno\workspace\c-learning\shapes.c
 	<stdio.h>
@@ -77,9 +77,10 @@
 
 1637596846 c:\users\bruno\workspace\c-learning\shapes.h
 
-1636656482 source:c:\users\bruno\workspace\c-learning\varios.c
+1637672286 source:c:\users\bruno\workspace\c-learning\varios.c
 	<time.h>
 	"varios.h"
+	<windows.h>
 
 1637596846 source:c:\users\bruno\workspace\c-learning\animations.c
 	<stdio.h>
@@ -89,7 +90,7 @@
 
 1637596846 c:\users\bruno\workspace\c-learning\animations.h
 
-1637604307 source:c:\users\bruno\workspace\c-learning\main.c
+1637659868 source:c:\users\bruno\workspace\c-learning\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
@@ -116,7 +117,7 @@
 
 1637596846 c:\users\bruno\workspace\c-learning\juegos.h
 
-1637628237 source:c:\users\bruno\workspace\c-learning\busca_minas.c
+1637751341 source:c:\users\bruno\workspace\c-learning\busca_minas.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

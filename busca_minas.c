@@ -11,23 +11,17 @@
 
 int jugarBM() {
 
-    /*printf("Pulsa \"s\" para jugar BUSCAMINAS: ");
-
-    char respuesta;
-    do {
-        respuesta = getch();
-    } while (respuesta != 'S' && respuesta != 's');
-*/
-
     do {
         int primeraVez = 1;
         gotoxy(0,0);
         srand(time(NULL));
         CLEANCONSOLE;
+        long initTime = getTimestamp();
 
         int width = 10;
         int height = 10;
-        int totalBombs = 10;
+        int totalBombs = 5;
+        int availableFlags = totalBombs;
 
         char board[width][height];
         char board2[width][height];
@@ -81,17 +75,25 @@ int jugarBM() {
                     if (board2[y][x] == 'o') {
                         setColor(0xA0);
                         board2[y][x] = 'F';
+                        availableFlags--;
                     } else if (board2[y][x] == 'F') {
                         setColor(0x0E);
                         board2[y][x] = '?';
+                        availableFlags++;
                     } else if (board2[y][x] == '?') {
                         setColor(0x0F);
                         board2[y][x] = 'o';
+                    } else {
+                        break;
                     }
 
                     printf("%c", board2[y][x]);
                     setColor(0x0F);
-
+                    if (availableFlags == 0) {
+                        if (win(board2, width, height, offsetY, initTime)) {
+                            key = 27;
+                        }
+                    }
                     //Si acaba de poner F, detectar si ganó...Es cuando en board2 no hay "o" y hay tantas "F" como totalBombs
 
                     break;
@@ -106,6 +108,11 @@ int jugarBM() {
                         }
                         setColor(2);
                         uncover(x, y, board, board2, width, height, offsetX, offsetY);
+                        if (availableFlags == 0) {
+                            if (win(board2, width, height, offsetY, initTime)) {
+                                key = 27;
+                            }
+                        }
                     }
                     break;
             }
@@ -116,7 +123,7 @@ int jugarBM() {
     return 0;
 }
 
-int lose(char *b1, char *b2, int width, int height, int offsetX, int offsetY) {
+void lose(char *b1, char *b2, int width, int height, int offsetX, int offsetY) {
     setPause(2500);
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
@@ -141,7 +148,6 @@ int lose(char *b1, char *b2, int width, int height, int offsetX, int offsetY) {
     setColor(15);
     gotoxy(0, height + offsetY + 1);
     printf("Has pisado una mina!\n");
-    return 0;
 
 }
 
@@ -200,7 +206,7 @@ void uncover(int x, int y, char * b1, char * b2, int width, int height, int offs
 
 }
 
-void showBoard(char *pboard, int width, int height) {
+void showBoard(char *pboard2, int width, int height) {
     for(int y = -1; y <= height; y++) {
         for(int x = -1; x <= width; x++) {
             if (y == -1 || y == height || x == -1 || x == width) {
@@ -208,7 +214,7 @@ void showBoard(char *pboard, int width, int height) {
                 printf("%c", 0xDB);
             } else {
                 setColor(15);
-                printf("%c", *(pboard+((width*y)+x)));
+                printf("%c", *(pboard2+((width*y)+x)));
             }
         }
         printf("\n");
@@ -274,3 +280,19 @@ void initBombs(int totalBombs, int width, int height, char *pboard, int xc, int 
         }
     }
 }
+
+int win(char *pboard2, int width, int height, int offsetY, long initTime) {
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            char c = *(pboard2+y*width+x);
+            if ( c == 'o' || c == '?') {
+                return 0;
+            }
+        }
+    }
+
+    gotoxy(0, height + offsetY + 1);
+    printf("Ganaste! Has encontrado todas las minas en %d segundos.", getTimestamp() - initTime);
+    return 1;
+}
+

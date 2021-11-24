@@ -12,6 +12,7 @@
 #define FALSE 0
 
 int main() {
+
     jugarBM();
 
     return 0;

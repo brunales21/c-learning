@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="animations.h" />
+		<Unit filename="busca_minas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="busca_minas.h" />
 		<Unit filename="consola.c">
 			<Option compilerVar="CC" />
 		</Unit>

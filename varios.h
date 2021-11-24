@@ -27,8 +27,7 @@ void ordenaLetrasDes(char texto[]);
 int mainPlayAhorcado();
 void playAhorcado();
 int encuentraLetra(char texto[], char letras[]);
-int carlos ();
-int ejWrite ();
+long getTimestamp();
 
 /*typedef struct {
     char nombre[30];
