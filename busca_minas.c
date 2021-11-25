@@ -20,7 +20,7 @@ int jugarBM() {
 
         int width = 10;
         int height = 10;
-        int totalBombs = 5;
+        int totalBombs = 10;
         int availableFlags = totalBombs;
 
         char board[width][height];
@@ -94,6 +94,7 @@ int jugarBM() {
                             key = 27;
                         }
                     }
+
                     //Si acaba de poner F, detectar si ganó...Es cuando en board2 no hay "o" y hay tantas "F" como totalBombs
 
                     break;
@@ -295,4 +296,3 @@ int win(char *pboard2, int width, int height, int offsetY, long initTime) {
     printf("Ganaste! Has encontrado todas las minas en %d segundos.", getTimestamp() - initTime);
     return 1;
 }
-
