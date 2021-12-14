@@ -34,11 +34,11 @@ int jugarBM() {
         int totalBombs;
         int availableFlags = totalBombs;
 
-        printf("ELIGE LA DIFICULTAD (F/N/D)");
+        printf("ELIGE LA DIFICULTAD: (f/n/d)\n-Facil\n-Normal\n-Dificil\n?");
         char dificultad = getche();
 
         while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
-                printf("\nELIGA LA DIFICULTAD (F/N/D)");
+                printf("\nNO HE ENTENDIDO, ELIGE LA DIFICULTAD: \nFacil\nNormal\nDificil\n?");
                 dificultad = getche();
         }
 
@@ -340,34 +340,34 @@ int win(char *pboard2, int width, int height, int offsetY, long initTime) {
 
 /*int setDifficulty(int width, int height, int totalBombs, int availablaFlags) {
 
-    printf("ELIGA LA DIFICULTAD (F/N/D)");
-    char dificultad = getche();
+        printf("ELIGE LA DIFICULTAD (F/N/D)");
+        char dificultad = getche();
 
-    if (dificultad == 'f' || dificultad == 'F') {
+        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
+                printf("\nELIGA LA DIFICULTAD (F/N/D)");
+                dificultad = getche();
+        }
+
+        if (dificultad == 'f' || dificultad == 'F') {
             width = 10;
             height = 10;
             totalBombs = 10;
-            availablaFlags = totalBombs;
+            availableFlags = totalBombs;
         }
             if (dificultad == 'n' || dificultad == 'N') {
                 width = 18;
                 height = 18;
                 totalBombs = 40;
-                availablaFlags = totalBombs;
+                availableFlags = totalBombs;
             }
                 if (dificultad == 'd' || dificultad == 'D') {
                     width = 24;
                     height = 24;
                     totalBombs = 99;
-                    availablaFlags = totalBombs;
+                    availableFlags = totalBombs;
             }
 
             CLEANCONSOLE;
-
-            return width;
-            return height;
-            return totalBombs;
-            return availablaFlags;
 
 
 }
