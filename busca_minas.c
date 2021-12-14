@@ -12,16 +12,57 @@
 int jugarBM() {
 
     do {
+
+
+      /*  printf("ELIGA LA DIFICULTAD (F/N/D)");
+
+        char dificultad = getche();
+        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
+                printf("\nELIGA LA DIFICULTAD (F/N/D)");
+                dificultad = getche();
+        }
+        */
+
         int primeraVez = 1;
         gotoxy(0,0);
         srand(time(NULL));
         CLEANCONSOLE;
         long initTime = getTimestamp();
 
-        int width = 10;
-        int height = 10;
-        int totalBombs = 10;
+        int width;
+        int height;
+        int totalBombs;
         int availableFlags = totalBombs;
+
+        printf("ELIGE LA DIFICULTAD (F/N/D)");
+        char dificultad = getche();
+
+        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
+                printf("\nELIGA LA DIFICULTAD (F/N/D)");
+                dificultad = getche();
+        }
+
+        if (dificultad == 'f' || dificultad == 'F') {
+            width = 10;
+            height = 10;
+            totalBombs = 10;
+            availableFlags = totalBombs;
+        }
+            if (dificultad == 'n' || dificultad == 'N') {
+                width = 18;
+                height = 18;
+                totalBombs = 40;
+                availableFlags = totalBombs;
+            }
+                if (dificultad == 'd' || dificultad == 'D') {
+                    width = 24;
+                    height = 24;
+                    totalBombs = 99;
+                    availableFlags = totalBombs;
+            }
+
+            CLEANCONSOLE;
+
 
         char board[width][height];
         char board2[width][height];
@@ -296,3 +337,38 @@ int win(char *pboard2, int width, int height, int offsetY, long initTime) {
     printf("Ganaste! Has encontrado todas las minas en %d segundos.", getTimestamp() - initTime);
     return 1;
 }
+
+/*int setDifficulty(int width, int height, int totalBombs, int availablaFlags) {
+
+    printf("ELIGA LA DIFICULTAD (F/N/D)");
+    char dificultad = getche();
+
+    if (dificultad == 'f' || dificultad == 'F') {
+            width = 10;
+            height = 10;
+            totalBombs = 10;
+            availablaFlags = totalBombs;
+        }
+            if (dificultad == 'n' || dificultad == 'N') {
+                width = 18;
+                height = 18;
+                totalBombs = 40;
+                availablaFlags = totalBombs;
+            }
+                if (dificultad == 'd' || dificultad == 'D') {
+                    width = 24;
+                    height = 24;
+                    totalBombs = 99;
+                    availablaFlags = totalBombs;
+            }
+
+            CLEANCONSOLE;
+
+            return width;
+            return height;
+            return totalBombs;
+            return availablaFlags;
+
+
+}
+*/
