@@ -106,7 +106,7 @@ int jugarBM() {
             if (prevAvailableFlags != availableFlags) {
                 gotoxy(7, height + 3);
                 setColor(11);
-                printf("%d      ", availableFlags);
+                printf("%d     ", availableFlags);
                 prevAvailableFlags = availableFlags;
             }
             gotoxy(x+offsetX, y+offsetY);
