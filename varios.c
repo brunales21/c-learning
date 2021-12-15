@@ -15,7 +15,6 @@ int seguirJugando() {
     }
 
     SALTO_DE_LINEA;
-    SALTO_DE_LINEA;
 
 
     if (respuesta == 's' || respuesta == 'S') {

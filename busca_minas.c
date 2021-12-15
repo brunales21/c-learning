@@ -13,16 +13,6 @@ int jugarBM() {
 
     do {
 
-
-      /*  printf("ELIGA LA DIFICULTAD (F/N/D)");
-
-        char dificultad = getche();
-        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
-                printf("\nELIGA LA DIFICULTAD (F/N/D)");
-                dificultad = getche();
-        }
-        */
-
         int primeraVez = 1;
         gotoxy(0,0);
         srand(time(NULL));
@@ -34,32 +24,43 @@ int jugarBM() {
         int totalBombs;
         int availableFlags = totalBombs;
 
-        printf("ELIGE LA DIFICULTAD: (f/n/d)\n-Facil\n-Normal\n-Dificil\n?");
+        setColor(11);
+        printf("ELIGE LA DIFICULTAD: (f|n|d|g)\n-Facil\n-Normal\n-Dificil\n-GOD MODE\n?");
         char dificultad = getche();
 
-        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
-                printf("\nNO HE ENTENDIDO, ELIGE LA DIFICULTAD: \nFacil\nNormal\nDificil\n?");
+        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D' && dificultad != 'g' && dificultad != 'G') {
+                printf("\nNO HE ENTENDIDO, ELIGE LA DIFICULTAD: \nFacil\nNormal\nDificil\n-GOD MODE\n?");
                 dificultad = getche();
         }
 
+        //FACIL
         if (dificultad == 'f' || dificultad == 'F') {
             width = 10;
             height = 10;
             totalBombs = 10;
             availableFlags = totalBombs;
         }
+        //MEDIO
             if (dificultad == 'n' || dificultad == 'N') {
                 width = 18;
                 height = 18;
                 totalBombs = 40;
                 availableFlags = totalBombs;
             }
+            //DIFICIL
                 if (dificultad == 'd' || dificultad == 'D') {
                     width = 24;
                     height = 24;
                     totalBombs = 99;
                     availableFlags = totalBombs;
             }
+            //GOD MODE
+                    if (dificultad == 'g' || dificultad == 'G') {
+                        width = 65;
+                        height = 35;
+                        totalBombs = 800;
+                        availableFlags = totalBombs;
+                    }
 
             CLEANCONSOLE;
 
@@ -94,9 +95,20 @@ int jugarBM() {
 
         char key;
 
+        gotoxy(0, height + 3);
+        setColor(3);
+        printf("Flags: ");
+
+        int prevAvailableFlags = 0;
 
         do {
 
+            if (prevAvailableFlags != availableFlags) {
+                gotoxy(7, height + 3);
+                setColor(11);
+                printf("%d      ", availableFlags);
+                prevAvailableFlags = availableFlags;
+            }
             gotoxy(x+offsetX, y+offsetY);
 
             key = getch(); // Aquí la ejecución se detiene esperando una tecla del teclado.
@@ -107,12 +119,18 @@ int jugarBM() {
             if (key == -32) {
                 key = getch(); // En este caso se devuelve inmediatamente un valor, la ejecución no se detiene aquí.
             }
+
             switch(key) {
                 case ARROW_UP: y = y - stepY >= minY ? y - stepY : y; break;
                 case ARROW_RIGHT: x = x + stepX <= maxX ? x + stepX : x; break;
                 case ARROW_DOWN: y = y + stepY <= maxY ? y + stepY : y; break;
                 case ARROW_LEFT: x = x - stepX >= minX ? x - stepX : x; break;
                 case 8:
+
+                    if (primeraVez) {
+                        break;
+                    }
+
                     if (board2[y][x] == 'o') {
                         setColor(0xA0);
                         board2[y][x] = 'F';
@@ -129,6 +147,7 @@ int jugarBM() {
                     }
 
                     printf("%c", board2[y][x]);
+
                     setColor(0x0F);
                     if (availableFlags == 0) {
                         if (win(board2, width, height, offsetY, initTime)) {
@@ -189,7 +208,7 @@ void lose(char *b1, char *b2, int width, int height, int offsetX, int offsetY) {
     }
     setColor(15);
     gotoxy(0, height + offsetY + 1);
-    printf("Has pisado una mina!\n");
+    printf("\nHas pisado una mina!\n");
 
 }
 
@@ -372,3 +391,5 @@ int win(char *pboard2, int width, int height, int offsetY, long initTime) {
 
 }
 */
+
+
