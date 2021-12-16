@@ -5,13 +5,15 @@
 #define TRUE 1
 #define MAX_AUX 257
 #define SALTO_DE_LINEA printf("\n");
+#define CLEANCONSOLE system("cls")
+
 
 int seguirJugando() {
+    setColor(15);
     printf("\nOtra partidita? (s/n) ");
-    char respuesta = getche();
+    char respuesta = getch();
     while (respuesta != 'S' && respuesta != 's' && respuesta != 'N' && respuesta != 'n') {
-        printf("\nNo he entendido... Si o no? (s/n) ");
-        respuesta = getche();
+        respuesta = getch();
     }
 
     SALTO_DE_LINEA;

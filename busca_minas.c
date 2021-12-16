@@ -26,11 +26,10 @@ int jugarBM() {
 
         setColor(11);
         printf("ELIGE LA DIFICULTAD: (f|n|d|g)\n-Facil\n-Normal\n-Dificil\n-GOD MODE\n?");
-        char dificultad = getche();
+        char dificultad = getch();
 
         while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D' && dificultad != 'g' && dificultad != 'G') {
-                printf("\nNO HE ENTENDIDO, ELIGE LA DIFICULTAD: \nFacil\nNormal\nDificil\n-GOD MODE\n?");
-                dificultad = getche();
+                dificultad = getch();
         }
 
         //FACIL
@@ -206,7 +205,7 @@ void lose(char *b1, char *b2, int width, int height, int offsetX, int offsetY) {
         }
         printf("\n");
     }
-    setColor(15);
+    setColor(4);
     gotoxy(0, height + offsetY + 1);
     printf("\nHas pisado una mina!\n");
 
@@ -353,43 +352,7 @@ int win(char *pboard2, int width, int height, int offsetY, long initTime) {
     }
 
     gotoxy(0, height + offsetY + 1);
-    printf("Ganaste! Has encontrado todas las minas en %d segundos.", getTimestamp() - initTime);
+    setColor(2);
+    printf("\nGanaste! Has encontrado todas las minas en %d segundos.", getTimestamp() - initTime);
     return 1;
 }
-
-/*int setDifficulty(int width, int height, int totalBombs, int availablaFlags) {
-
-        printf("ELIGE LA DIFICULTAD (F/N/D)");
-        char dificultad = getche();
-
-        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D') {
-                printf("\nELIGA LA DIFICULTAD (F/N/D)");
-                dificultad = getche();
-        }
-
-        if (dificultad == 'f' || dificultad == 'F') {
-            width = 10;
-            height = 10;
-            totalBombs = 10;
-            availableFlags = totalBombs;
-        }
-            if (dificultad == 'n' || dificultad == 'N') {
-                width = 18;
-                height = 18;
-                totalBombs = 40;
-                availableFlags = totalBombs;
-            }
-                if (dificultad == 'd' || dificultad == 'D') {
-                    width = 24;
-                    height = 24;
-                    totalBombs = 99;
-                    availableFlags = totalBombs;
-            }
-
-            CLEANCONSOLE;
-
-
-}
-*/
-
-
