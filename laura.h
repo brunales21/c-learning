@@ -1,6 +1,0 @@
-#ifndef LAURA_H_INCLUDED
-#define LAURA_H_INCLUDED
-
-
-
-#endif // LAURA_H_INCLUDED
