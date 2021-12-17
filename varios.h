@@ -28,26 +28,8 @@ int mainPlayAhorcado();
 void playAhorcado();
 int encuentraLetra(char texto[], char letras[]);
 long getTimestamp();
+int getInteger(char * texto, int min, int max);
 
-/*typedef struct {
-    char nombre[30];
-    char apellido[30];
-    char paisNacimiento[30];
-    char liga[20];
-    char club[30];
-    char posicion[10];
-    int media;
-    int disparo;
-    int regate;
-    int pase;
-    int ritmo;
-    int defensa;
-    int fisico;
-} Jugador;
-
-//void imprimir_datos(struct jugador *j);
-void imprimir_datos(Jugador *j);
-*/
 
 #endif // VARIOS_H_INCLUDED
 

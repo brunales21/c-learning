@@ -341,3 +341,15 @@ long getTimestamp() {
     GetSystemTime(&time);
     return time.wHour * 3600 + time.wMinute * 60 + time.wSecond;
 }
+
+int getInteger(char * texto, int min, int max) {
+
+    int newInt;
+
+    do {
+        printf("Ingrese %s [%d, %d]: ", texto, min, max);
+        scanf("%d", &newInt);
+    } while (newInt < min || newInt > max);
+
+    return newInt;
+}

@@ -10,13 +10,16 @@
 #define BYTE unsigned char
 #define TRUE 1
 #define FALSE 0
+#define CLEANCONSOLE system("cls")
+
 
 int main() {
-
     jugarBM();
-
-    return 0;
 }
+
+
+
+
 
 
 

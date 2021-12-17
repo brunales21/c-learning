@@ -19,49 +19,57 @@ int jugarBM() {
         CLEANCONSOLE;
         long initTime = getTimestamp();
 
-        int width;
+        int width=0;
         int height;
         int totalBombs;
         int availableFlags = totalBombs;
 
         setColor(11);
-        printf("ELIGE LA DIFICULTAD: (f|n|d|g)\n-Facil\n-Normal\n-Dificil\n-GOD MODE\n?");
-        char dificultad = getch();
-
-        while (dificultad != 'f' && dificultad != 'F' && dificultad != 'n' && dificultad != 'N' && dificultad != 'd' && dificultad != 'D' && dificultad != 'g' && dificultad != 'G') {
-                dificultad = getch();
-        }
-
-        //FACIL
-        if (dificultad == 'f' || dificultad == 'F') {
-            width = 10;
-            height = 10;
-            totalBombs = 10;
-            availableFlags = totalBombs;
-        }
-        //MEDIO
-            if (dificultad == 'n' || dificultad == 'N') {
-                width = 18;
-                height = 18;
-                totalBombs = 40;
-                availableFlags = totalBombs;
-            }
-            //DIFICIL
-                if (dificultad == 'd' || dificultad == 'D') {
+        printf("ELIGE LA DIFICULTAD: (f|n|d|g|p)\n-Facil\n-Normal\n-Dificil\n-GOD MODE\n-Personalizable\n?");
+        do {
+            switch(getch()) {
+                //FACIL
+                case 'f':
+                case 'F':
+                    width = 10;
+                    height = 10;
+                    totalBombs = 10;
+                    break;
+                //MEDIO
+                case 'n':
+                case 'N':
+                    width = 18;
+                    height = 18;
+                    totalBombs = 40;
+                    break;
+                //DIFICIL
+                case 'd':
+                case 'D':
                     width = 24;
                     height = 24;
                     totalBombs = 99;
-                    availableFlags = totalBombs;
+                    break;
+                //GOD MODE
+                case 'g':
+                case 'G':
+                    width = 65;
+                    height = 35;
+                    totalBombs = 800;
+                    break;
+                //
+                case 'p':
+                case 'P':
+                    printf("\n\n");
+                    width = getInteger("Ancho", 4, 65);
+                    height = getInteger("Alto", 4, 35);
+                    totalBombs = getInteger("Bombas", 1, height * width - 9);
+                    break;
             }
-            //GOD MODE
-                    if (dificultad == 'g' || dificultad == 'G') {
-                        width = 65;
-                        height = 35;
-                        totalBombs = 800;
-                        availableFlags = totalBombs;
-                    }
+        } while(width==0);
 
-            CLEANCONSOLE;
+        availableFlags = totalBombs;
+
+        CLEANCONSOLE;
 
 
         char board[width][height];
