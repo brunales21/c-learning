@@ -116,11 +116,10 @@ int showMatrixEffect(char * availableSymbols) {
     Position points[width];
     int colors[width];
     char symbols[width];
-    //int fibo[] = { 1, 1, 2, 3, 5, 8, 13};
 
     do {
         //Inicializamos puntos, colores y simbolos
-        for(int i = 0; i<width && isKbUntouched(); i++) {
+        for(int i = 0; i < width && isKbUntouched(); i++) {
             points[i].x = i;
             points[i].y = getRandom(0, height);
             symbols[i] = availableSymbols[ getRandom(0, strlen(availableSymbols) - 1) ];
@@ -134,7 +133,7 @@ int showMatrixEffect(char * availableSymbols) {
 
         while(flag && isKbUntouched()) {
             flag = 0;
-            for(int i = 0; i<width && isKbUntouched(); i++) {
+            for(int i = 0; i < width && isKbUntouched(); i++) {
                 if(points[i].y < height) {
                     //clearPoint(points[i]);
                     points[i].y++;

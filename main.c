@@ -13,16 +13,10 @@
 #define CLEANCONSOLE system("cls")
 
 
+
 int main() {
-    jugarBM();
+    return 0;
 }
-
-
-
-
-
-
-
 
 
 

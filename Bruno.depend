@@ -65,7 +65,7 @@
 	<conio.h>
 	<windows.h>
 
-1639747012 c:\users\bruno\workspace\c-learning\varios.h
+1640611764 c:\users\bruno\workspace\c-learning\varios.h
 
 1637596846 source:c:\users\bruno\workspace\c-learning\shapes.c
 	<stdio.h>
@@ -77,12 +77,12 @@
 
 1637596846 c:\users\bruno\workspace\c-learning\shapes.h
 
-1639747012 source:c:\users\bruno\workspace\c-learning\varios.c
+1640612663 source:c:\users\bruno\workspace\c-learning\varios.c
 	<time.h>
 	"varios.h"
 	<windows.h>
 
-1637596846 source:c:\users\bruno\workspace\c-learning\animations.c
+1640466420 source:c:\users\bruno\workspace\c-learning\animations.c
 	<stdio.h>
 	"consola.h"
 	"shapes.h"
@@ -90,7 +90,7 @@
 
 1637596846 c:\users\bruno\workspace\c-learning\animations.h
 
-1639747012 source:c:\users\bruno\workspace\c-learning\main.c
+1640961650 source:c:\users\bruno\workspace\c-learning\main.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>

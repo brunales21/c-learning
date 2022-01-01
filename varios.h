@@ -29,6 +29,8 @@ void playAhorcado();
 int encuentraLetra(char texto[], char letras[]);
 long getTimestamp();
 int getInteger(char * texto, int min, int max);
+char getDniLetter(int dniNum);
+int getHighestInc(int * nums, int len);
 
 
 #endif // VARIOS_H_INCLUDED

@@ -353,3 +353,28 @@ int getInteger(char * texto, int min, int max) {
 
     return newInt;
 }
+
+char getDniLetter(int dniNum) {
+    int resto = dniNum % 23;
+    char letra[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+    return letra[resto];
+}
+
+int getHighestInc(int * nums, int len) {
+    int acc = 0;
+    int highestInc = 0;
+    for (int i = 0; i < len - 1; i++){
+        int inc = nums[i+1] - nums[i];
+        if (inc >= 0) {
+            acc = acc + inc;
+            if (acc > highestInc) {
+                highestInc = acc;
+            }
+        } else {
+            acc = 0;
+        }
+
+    }
+    return highestInc;
+}
+
